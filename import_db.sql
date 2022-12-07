@@ -65,6 +65,7 @@ CREATE TABLE replies (
     body TEXT NOT NULL,
     FOREIGN KEY (parent_reply) REFERENCES replies(id),
     FOREIGN KEY (users_id) REFERENCES users(id)
+    FOREIGN KEY (q_subject) REFERENCES questions(id)
 );
 
 INSERT INTO
