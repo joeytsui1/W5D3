@@ -29,6 +29,11 @@ INSERT INTO
 VALUES
     (1, 'App Academy', 'This is stresfull!', 2);
 
+INSERT INTO
+    questions (id, title, body, author_id)
+VALUES
+    (2, 'Manny', 'MANNY MANNY MANNY', 1);
+
 DROP TABLE IF EXISTS question_follows;
 
 CREATE TABLE question_follows (
@@ -45,6 +50,11 @@ INSERT INTO
 VALUES
     (1, 2, 1);
 
+INSERT INTO
+    question_follows (id, users_id, questions_id)
+VALUES
+    (2, 1, 2);
+    
 DROP TABLE IF EXISTS replies;
 
 CREATE TABLE replies (
@@ -60,7 +70,9 @@ CREATE TABLE replies (
 INSERT INTO
     replies (id, q_subject, parent_reply, users_id, body)
 VALUES
-    (1, 'School', NULL, 2, 'It will get better.');
+    (1, 'School', NULL, 2, 'It will get better.'),
+    (2, 'reree', 1, 2, 'dfdsafsfdsd'),
+    (3, 'Manny', NUll, 1, 'MANANNAAN');
 
 DROP TABLE IF EXISTS question_likes;
 
